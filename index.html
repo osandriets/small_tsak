@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+<body>
+<main>
+    <h1>Upgrade to Customize Your Achieve Client App</h1>
+    <p class="text-center">Choose a plan to get an accsess to customization settings:</p>
+    <div class="card">
+        <div class="ribbon"><span>MOST POPULAR</span></div>
+        <div class="card-block">
+            <div class="grade color-blue">PRO</div>
+            <div class="prise">$40/month</div>
+            <h3>Everything included in <span class="color-yellow">Basic</span> plus:</h3>
+            <form id="form1">
+                <div class="toggles">
+                    <input id="checkbox-10" type="checkbox" value="Select option" onclick="check('form1')">
+                    <label for="checkbox-10" class="checkbox">Configure Colors and Splash Screen</label>
+                    <input id="checkbox-11" type="checkbox" value="minimal" onclick="check('form1')">
+                    <label for="checkbox-11" class="checkbox">Equipment and Asset Booking</label>
+                    <input id="checkbox-12" type="checkbox" value="minimal" onclick="check('form1')">
+                    <label for="checkbox-12" class="checkbox">Events, Enrollments and Workshop Booking</label>
+                    <input id="checkbox-13" type="checkbox" value="minimal" onclick="check('form1')">
+                    <label for="checkbox-13" class="checkbox">On-Demand and Automatic Push Notifications</label>
+                </div>
+                <button type='submit' name="submit" disabled="disabled">BUY NOW</button>
+            </form>
+        </div>
+        <div class="block-img">
+            <img src="img/bl_1.png">
+            <img src="img/bl_2.png">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-block">
+            <div class="grade color-green">ENTERPRISE</div>
+            <div class="prise">$60/month</div>
+            <h3>Everything in <span class="color-blue">Pro</span> plus: </h3>
+            <form id="form2">
+                <div class="toggles">
+                    <input id="checkbox-20" type="checkbox" value="Select option" onclick="check('form2')">
+                    <label for="checkbox-20" class="checkbox">Dedicated download on the <br>Apple App Store and Google Play</label>
+                    <input id="checkbox-21" type="checkbox" value="minimal" onclick="check('form2')">
+                    <label for="checkbox-21" class="checkbox">Custom icon</label>
+                </div>
+                <button type='submit' name="submit" disabled="disabled">BUY NOW</button>
+            </form>
+        </div>
+        <div class="block-img">
+            <img src="img/b2_1.png">
+            <img src="img/b2_2.png">
+        </div>
+    </div>
+</main>
+
+<script>
+    function check(e) {
+        var inputs = document.getElementById(e).querySelectorAll('input'),
+                submit = document.getElementById(e).querySelector('button'),
+                flag = false;
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].checked) flag = true;
+        }
+        if (flag) submit.disabled = '';
+        else submit.disabled = 'disabled';
+    }
+</script>
+
+</body>
+</html>
